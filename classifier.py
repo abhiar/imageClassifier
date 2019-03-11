@@ -48,10 +48,10 @@ y_pred = model.predict(X_test)
 
 from sklearn.metrics import confusion_matrix
 matrix = confusion_matrix(y_test.argmax(axis=1), y_pred.argmax(axis=1))
+print("Confusion Matrix:")
 print(matrix)
 
 score = model.evaluate(X_test, y_test)
-print("Confusion Matrix:")
 print("Accuracy = ", score[1])
 
 model.save('my_model.h5')
